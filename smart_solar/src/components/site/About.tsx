@@ -3,9 +3,9 @@ import thilini from "../../assets/thilini.jpeg";
 import nushkan from "../../assets/nushkan.jpeg";
 
 import chamika from "../../assets/chamika.jpg";
-import limasha from "../../assets/nushkan.jpeg";
-import vihanga from "../../assets/nushkan.jpeg";
-import malmi from "../../assets/nushkan.jpeg";
+import limasha from "../../assets/limasha.jpg";
+import vihanga from "../../assets/vihanga.jpg";
+import malmi from "../../assets/malmi.jpg";
 
 const supervisors = [
   { name: "Ms. Thilini Jayalath", role: "Supervisor", email: "thilini.j@sliit.lk", initials: "TJ", image: thilini },
