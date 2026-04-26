@@ -1,30 +1,32 @@
 import { FileText, FileSpreadsheet, BookMarked, ExternalLink, Presentation, FileBadge, Files, Download } from "lucide-react";
 
 const proposals = [
-  { name: "Member One", reg: "IT/2021/001", url: "https://drive.google.com/" },
-  { name: "Member Two", reg: "IT/2021/002", url: "https://drive.google.com/" },
-  { name: "Member Three", reg: "IT/2021/003", url: "https://drive.google.com/" },
-  { name: "Member Four", reg: "IT/2021/004", url: "https://drive.google.com/" },
+  { name: "Dilshan S. C", reg: "IT22118318", url: "https://drive.google.com/file/d/1JP9IOMAAFV1KDHi4q2Wcv-Y5_ad9BW-7/view?usp=drive_link" },
+  { name: "Madusarani K.G.L", reg: "IT22569868", url: "https://drive.google.com/file/d/1AS9iSvJyZILIzJUK06phVCQJAAh65Oae/view?usp=drive_link" },
+  { name: "Liyanaarachchi L.A.V.U", reg: "IT22120502", url: "https://drive.google.com/file/d/1lnevLXyeqeQHuhUcQMfzcPx7HrXzGajs/view?usp=drive_link" },
+  { name: "K Rangana Malmi Nadee", reg: "IT22341204", url: "https://drive.google.com/file/d/1rqf_X-w7GWWrOUt7sW5JmNXEZEV9XHfA/view?usp=drive_link" },
 ];
 
 const finalReports = [
-  { name: "Member One", reg: "IT/2021/001", url: "https://drive.google.com/" },
-  { name: "Member Two", reg: "IT/2021/002", url: "https://drive.google.com/" },
-  { name: "Member Three", reg: "IT/2021/003", url: "https://drive.google.com/" },
-  { name: "Member Four", reg: "IT/2021/004", url: "https://drive.google.com/" },
+  { name: "Dilshan S. C", reg: "IT22118318", url: "https://drive.google.com/" },
+  { name: "Madusarani K.G.L", reg: "IT22569868", url: "https://drive.google.com/" },
+  { name: "Liyanaarachchi L.A.V.U", reg: "IT22120502", url: "https://drive.google.com/" },
+  { name: "K Rangana Malmi Nadee", reg: "IT22341204", url: "https://drive.google.com/" },
 ];
 
 const docs = [
   { title: "Project Charter", desc: "Initial scope, team roles, timeline & deliverables.", url: "https://drive.google.com/", icon: FileText, color: "neon" },
-  { title: "Group Proposal", desc: "Full research proposal with literature review & methodology.", url: "https://drive.google.com/", icon: FileText, color: "solar" },
-  { title: "Group Final Report", desc: "Complete dissertation including results & conclusions.", url: "https://drive.google.com/", icon: BookMarked, color: "neon" },
+  { title: "Checklist 1", desc: "Git Repository", url: "https://drive.google.com/file/d/1OO6CqqmB4vBTmufWmZ2mde61A0HcJi84/view?usp=drive_link", icon: FileText, color: "solar" },
+  { title: "Checklist 2", desc: "UI/UX Demo Video", url: "https://drive.google.com/", icon: FileText, color: "neon" },
+  { title: "Checklist 3", desc: "Deployment Report", url: "https://drive.google.com/", icon: FileText, color: "solar" },
+  { title: "Group Final Report", desc: "Complete dissertation including results & conclusions.", url: "https://drive.google.com/", icon: BookMarked, color: "solar" },
   { title: "Logbooks", desc: "Weekly progress logs and supervisor meeting notes.", url: "https://drive.google.com/", icon: FileSpreadsheet, color: "solar" },
 ];
 
 const slides = [
-  { title: "Proposal Presentation", desc: "Pitch deck explaining the problem, idea & expected impact.", url: "https://drive.google.com/" },
-  { title: "Progress Presentation 1", desc: "Hardware prototype and sensor calibration findings.", url: "https://drive.google.com/" },
-  { title: "Progress Presentation 2", desc: "Cloud pipeline + ML model + dashboard demo.", url: "https://drive.google.com/" },
+  { title: "Proposal Presentation", desc: "Pitch deck explaining the problem, idea & expected impact.", url: "https://drive.google.com/drive/folders/1np-N7qWaFPb7oCvVyUbB1Td1Pij5izzt?usp=drive_link" },
+  { title: "Progress Presentation 1", desc: "Hardware prototype and sensor calibration findings.", url: "https://drive.google.com/drive/folders/13w9ybomXXh3JqBCsfZSrXmW5_OvzN1wk?usp=drive_link" },
+  { title: "Progress Presentation 2", desc: "Cloud pipeline + ML model + dashboard demo.", url: "https://drive.google.com/drive/folders/1uB93-v3D0RAAbUcHwMKMeW1HZ7Sx-Mzm?usp=drive_link" },
   { title: "Final Presentation", desc: "End-to-end system showcase with validation results.", url: "https://drive.google.com/" },
 ];
 
