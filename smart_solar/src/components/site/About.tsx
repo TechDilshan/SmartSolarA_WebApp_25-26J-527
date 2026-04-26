@@ -1,21 +1,27 @@
 import { Mail, GraduationCap, User } from "lucide-react";
+import thilini from "../../assets/thilini.jpeg";
+import nushkan from "../../assets/nushkan.jpeg";
+
+import chamika from "../../assets/chamika.jpg";
+import limasha from "../../assets/nushkan.jpeg";
+import vihanga from "../../assets/nushkan.jpeg";
+import malmi from "../../assets/nushkan.jpeg";
 
 const supervisors = [
-  { name: "Dr. A. Perera", role: "Supervisor", email: "supervisor@uni.lk", initials: "AP" },
-  { name: "Mr. S. Fernando", role: "Co-Supervisor", email: "cosupervisor@uni.lk", initials: "SF" },
+  { name: "Ms. Thilini Jayalath", role: "Supervisor", email: "thilini.j@sliit.lk", initials: "TJ", image: thilini },
+  { name: "Mr. Nushkan Nismi", role: "Co-Supervisor", email: "nushkan.n@sliit.lk", initials: "NN", image: nushkan },
 ];
 
 const team = [
-  { name: "Kavindu Jayawardena", reg: "IT21XXXXX", role: "IoT Developer", email: "kavindu@uni.lk", initials: "KJ" },
-  { name: "Nimali Silva", reg: "IT21XXXXX", role: "ML Engineer", email: "nimali@uni.lk", initials: "NS" },
-  { name: "Ravindu Perera", reg: "IT21XXXXX", role: "Cloud Engineer", email: "ravindu@uni.lk", initials: "RP" },
-  { name: "Tharushi Bandara", reg: "IT21XXXXX", role: "Frontend Developer", email: "tharushi@uni.lk", initials: "TB" },
+  { name: "Chamika Dilshan", reg: "IT22118318", role: "Leader", email: "chamikadilshan1123@gmail.com", initials: "CD", image: chamika },
+  { name: "Limasha Madusarani", reg: "IT22569868", role: "Member", email: "limashamadusarani001@gmail.com", initials: "LM", image: limasha },
+  { name: "Vihanga Upamal", reg: "IT22120502", role: "Member", email: "upamal2001@gmail.com", initials: "VU", image: vihanga },
+  { name: "Malmi Nadee", reg: "IT22341204", role: "Member", email: "malminadee324@gmail.com", initials: "MN", image: malmi },
 ];
 
 const Avatar = ({ initials, accent }: { initials: string; accent: "neon" | "solar" }) => (
-  <div className={`relative w-24 h-24 rounded-2xl flex items-center justify-center text-2xl font-bold ${
-    accent === "neon" ? "bg-gradient-neon shadow-glow-neon" : "bg-gradient-solar shadow-glow-solar"
-  } text-background`}>
+  <div className={`relative w-24 h-24 rounded-2xl flex items-center justify-center text-2xl font-bold ${accent === "neon" ? "bg-gradient-neon shadow-glow-neon" : "bg-gradient-solar shadow-glow-solar"
+    } text-background`}>
     {initials}
     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent" />
   </div>
@@ -41,7 +47,7 @@ export const About = () => (
         <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {supervisors.map((s, i) => (
             <div key={i} className="glass-card tilt-card p-7 reveal flex flex-col items-center text-center" style={{ transitionDelay: `${i * 100}ms` }}>
-              <Avatar initials={s.initials} accent="solar" />
+              <img src={s.image} alt={s.name} className="w-24 h-24 rounded-full object-cover" />
               <h3 className="font-bold text-xl mt-5">{s.name}</h3>
               <div className="text-sm text-solar font-mono uppercase tracking-wider mt-1">{s.role}</div>
               <a href={`mailto:${s.email}`} className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-neon mt-3 transition-colors">
@@ -61,7 +67,7 @@ export const About = () => (
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {team.map((m, i) => (
             <div key={i} className="glass-card tilt-card p-6 reveal flex flex-col items-center text-center" style={{ transitionDelay: `${i * 80}ms` }}>
-              <Avatar initials={m.initials} accent="neon" />
+              <img src={m.image} alt={m.name} className="w-24 h-24 rounded-full object-cover" />
               <h3 className="font-bold text-lg mt-5">{m.name}</h3>
               <div className="text-xs font-mono text-muted-foreground mt-1">{m.reg}</div>
               <div className="text-sm text-neon font-medium mt-2">{m.role}</div>
