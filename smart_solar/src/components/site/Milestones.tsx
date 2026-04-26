@@ -1,11 +1,11 @@
 import { CheckCircle2, Circle, Calendar } from "lucide-react";
 
 const items = [
-  { title: "Project Proposal", date: "Jan 2025", marks: "10/10", desc: "Initial idea pitched, scope defined, supervisors approved.", done: true },
-  { title: "Progress Presentation 1", date: "Apr 2025", marks: "18/20", desc: "Hardware prototype + sensor calibration completed.", done: true },
-  { title: "Progress Presentation 2", date: "Aug 2025", marks: "22/25", desc: "Cloud pipeline, dashboard MVP and initial ML model demo.", done: true },
-  { title: "Final Assessment", date: "Nov 2025", marks: "—", desc: "Full system integration, validation against reference site.", done: false },
-  { title: "Viva Voce", date: "Dec 2025", marks: "—", desc: "Final defence and project handover to faculty.", done: false },
+  { title: "Project Proposal", date: "Oct 2025", marks: "10/10", desc: "Initial idea pitched, scope defined, supervisors approved.", done: true },
+  { title: "Progress Presentation 1", date: "Jan 2026", marks: "18/20", desc: "Hardware prototype + sensor calibration completed.", done: true },
+  { title: "Progress Presentation 2", date: "March 2026", marks: "22/25", desc: "Cloud pipeline, dashboard MVP and initial ML model demo.", done: true },
+  { title: "Final Assessment", date: "Apr 2026", marks: "—", desc: "Full system integration, validation against reference site.", done: false },
+  { title: "Final Viva", date: "May 2026", marks: "—", desc: "Final defence and project handover to faculty.", done: false },
 ];
 
 export const Milestones = () => (
@@ -25,16 +25,14 @@ export const Milestones = () => (
         {items.map((it, i) => (
           <div
             key={i}
-            className={`relative reveal flex items-start gap-6 mb-10 md:mb-14 ${
-              i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            }`}
+            className={`relative reveal flex items-start gap-6 mb-10 md:mb-14 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
             style={{ transitionDelay: `${i * 80}ms` }}
           >
             {/* Node */}
             <div className="relative z-10 shrink-0 ml-1 md:ml-0 md:absolute md:left-1/2 md:-translate-x-1/2">
-              <div className={`w-11 h-11 rounded-full flex items-center justify-center border-2 ${
-                it.done ? "bg-gradient-mixed border-neon shadow-glow-neon" : "glass border-neon/40"
-              }`}>
+              <div className={`w-11 h-11 rounded-full flex items-center justify-center border-2 ${it.done ? "bg-gradient-mixed border-neon shadow-glow-neon" : "glass border-neon/40"
+                }`}>
                 {it.done ? <CheckCircle2 className="w-5 h-5 text-background" /> : <Circle className="w-5 h-5 text-neon" />}
               </div>
             </div>

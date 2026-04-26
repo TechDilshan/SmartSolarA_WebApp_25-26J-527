@@ -42,14 +42,13 @@ export const Contact = () => {
           {/* Info */}
           <div className="space-y-4 reveal">
             {[
-              { icon: Mail, label: "Email", value: "smartsolar@uni.lk", href: "mailto:smartsolar@uni.lk", c: "neon" },
-              { icon: Phone, label: "Phone", value: "+94 77 123 4567", href: "tel:+94771234567", c: "solar" },
+              { icon: Mail, label: "Email", value: "smartsolar@uni.lk", href: "mailto:info@solaradvisor.site", c: "neon" },
+              { icon: Phone, label: "Phone", value: "+94 77 123 4567", href: "tel:+94703966227", c: "solar" },
               { icon: MapPin, label: "Location", value: "Faculty of Computing, Sri Lanka", href: "#", c: "neon" },
             ].map((it, i) => (
               <a key={i} href={it.href} className="glass-card p-5 flex items-center gap-4 group">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                  it.c === "neon" ? "bg-neon/10 border border-neon/30 text-neon" : "bg-solar/10 border border-solar/30 text-solar"
-                }`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${it.c === "neon" ? "bg-neon/10 border border-neon/30 text-neon" : "bg-solar/10 border border-solar/30 text-solar"
+                  }`}>
                   <it.icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
