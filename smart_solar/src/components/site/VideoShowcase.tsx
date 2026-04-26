@@ -1,25 +1,29 @@
 import { useEffect, useRef } from "react";
 import { Radio, MapPin } from "lucide-react";
+import video1 from "@/assets/video1.mp4"
+import video2 from "@/assets/video2.mp4"
+import video3 from "@/assets/video3.mp4"
+import video4 from "@/assets/video4.mp4"
 
 // Placeholder vertical demo videos — replace src URLs with real rooftop IoT footage.
 const videos = [
   {
-    src: "https://cdn.coverr.co/videos/coverr-solar-panels-on-the-roof-3287/1080p.mp4",
+    src: video1,
     label: "Rooftop Sensor Array",
     location: "Site A · North Facing",
   },
   {
-    src: "https://cdn.coverr.co/videos/coverr-a-solar-power-plant-3289/1080p.mp4",
+    src: video4,
     label: "Live Data Capture",
     location: "ESP32 + DHT22",
   },
   {
-    src: "https://cdn.coverr.co/videos/coverr-solar-panels-in-the-sun-3288/1080p.mp4",
+    src: video3,
     label: "Real Environment Setup",
     location: "Site B · Open Sky",
   },
   {
-    src: "https://cdn.coverr.co/videos/coverr-clouds-passing-over-solar-panels-3290/1080p.mp4",
+    src: video2,
     label: "Irradiance Monitoring",
     location: "Pyranometer Mount",
   },
@@ -33,7 +37,7 @@ export const VideoShowcase = () => {
       (entries) => {
         entries.forEach((e) => {
           const v = e.target as HTMLVideoElement;
-          if (e.isIntersecting) v.play().catch(() => {});
+          if (e.isIntersecting) v.play().catch(() => { });
           else v.pause();
         });
       },

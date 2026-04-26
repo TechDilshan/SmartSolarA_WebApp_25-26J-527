@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Sun, Moon, Menu, X, Zap } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import { cn } from "@/lib/utils";
+import Logo from "@/assets/Logo.png"
 
 const links = [
   { id: "home", label: "Home" },
@@ -51,12 +52,14 @@ export const Navbar = () => {
       )}>
         <button onClick={() => go("home")} className="flex items-center gap-2 group py-2">
           <div className="relative">
-            <div className="w-9 h-9 rounded-xl bg-gradient-mixed flex items-center justify-center shadow-glow-neon group-hover:rotate-12 transition-transform">
-              <Zap className="w-5 h-5 text-background" strokeWidth={2.5} />
-            </div>
+            <img
+              src={Logo}
+              alt="Smart Solar Advisor"
+              className="w-10 h-10 rounded-xl object-contain"
+            />
           </div>
           <span className="font-bold text-lg tracking-tight hidden sm:block">
-            Smart<span className="text-gradient-neon">Solar</span>
+            <span className="text-gradient-neon">Smart</span>SolarAdvisor
           </span>
         </button>
 
