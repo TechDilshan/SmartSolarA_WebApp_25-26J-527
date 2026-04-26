@@ -3,6 +3,7 @@ import heroImg from "@/assets/hero-solar.jpg";
 import sunOrb from "@/assets/sun-orb.png";
 import solarPanel from "@/assets/solar-panel.png";
 import iotDevice from "@/assets/iot-device.png";
+import appPoster from "@/assets/app-poster.png";
 
 export const Hero = () => {
   const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -79,6 +80,15 @@ export const Hero = () => {
                 className="w-full h-full object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            </div>
+
+            {/* App Poster / Mobile Mockup */}
+            <div className="absolute -right-4 lg:-right-12 top-8 bottom-8 w-[240px] lg:w-[280px] rounded-[2rem] overflow-hidden glass border-4 border-background shadow-2xl animate-float z-20 drop-shadow-[0_0_30px_hsl(var(--neon)/0.3)] hidden sm:block">
+              <img
+                src={appPoster}
+                alt="Smart Solar Advisor App"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Floating elements */}
