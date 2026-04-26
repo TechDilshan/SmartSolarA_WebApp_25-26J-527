@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, Target, AlertCircle, Compass, Workflow, Cpu, ChevronRight } from "lucide-react";
+import { BookOpen, Target, AlertCircle, Compass, Workflow, Cpu, ChevronRight, Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
@@ -9,10 +9,7 @@ const tabs = [
     label: "Literature Survey",
     body: (
       <>
-        Existing solar forecasting tools rely heavily on historical satellite data and broad regional models.
-        Studies (PVWatts, NREL SAM) provide annual estimates but lack site-specific micro-climate awareness.
-        Recent ML-driven approaches (LSTM, XGBoost) improve short-term horizons but rarely fuse on-site IoT
-        telemetry with cloud analytics for pre-installation advice.
+        Existing solar forecasting tools rely heavily on historical satellite data and broad regional models. Studies like PVWatts and NREL SAM provide annual estimates but lack site-specific micro-climate awareness. Recent machine learning-driven approaches (such as LSTM, XGBoost) have improved short-term forecasts but rarely fuse on-site IoT telemetry with cloud analytics for pre-installation advice, creating a gap in the market.
       </>
     ),
   },
@@ -22,9 +19,7 @@ const tabs = [
     label: "Research Gap",
     body: (
       <>
-        Homeowners face a critical blind spot: <span className="text-solar">no affordable system measures
-        the actual solar potential of a specific rooftop before buying panels</span>. Generic calculators ignore
-        shading, tilt, dust, and local weather variability — leading to over- or under-sizing.
+        Homeowners face a critical blind spot: <span className="text-solar">no affordable system measures the actual solar potential of a specific rooftop before buying panels</span>. Generic calculators ignore important factors like shading, tilt, dust accumulation, and local weather variability — leading to over- or under-sizing of solar systems. Our solution addresses this gap by providing location-specific predictions before installation.
       </>
     ),
   },
@@ -34,9 +29,7 @@ const tabs = [
     label: "Research Problem",
     body: (
       <>
-        How can a low-cost IoT device, combined with cloud machine learning, accurately forecast monthly
-        solar energy yield for a specific location <span className="text-neon">before installation</span>,
-        with confidence comparable to post-install monitoring systems?
+        The research problem is: How can a low-cost IoT device, combined with cloud machine learning, accurately forecast monthly solar energy yield for a specific location <span className="text-neon">before installation</span>, with confidence comparable to post-install monitoring systems? The challenge lies in creating a system that is both affordable and precise, addressing real-world conditions that affect solar energy generation.
       </>
     ),
   },
@@ -47,13 +40,16 @@ const tabs = [
     body: (
       <ul className="space-y-2">
         {[
-          "Design a portable IoT sensor unit (irradiance, temp, humidity, UV).",
+          "Design a portable IoT sensor unit (irradiance, temperature, humidity, UV).",
           "Build a cloud pipeline for continuous data ingestion & storage.",
-          "Train ML model for daily + 30-day energy forecasts.",
-          "Deliver an interactive advisor dashboard for end users.",
-          "Validate accuracy against installed reference systems.",
+          "Train a machine learning model for daily and 30-day energy forecasts.",
+          "Develop an interactive advisor dashboard for end users.",
+          "Validate model accuracy against installed reference systems."
         ].map((o, i) => (
-          <li key={i} className="flex gap-2"><ChevronRight className="w-4 h-4 text-neon mt-1 shrink-0" />{o}</li>
+          <li key={i} className="flex gap-2">
+            <ChevronRight className="w-4 h-4 text-neon mt-1 shrink-0" />
+            {o}
+          </li>
         ))}
       </ul>
     ),
@@ -65,15 +61,18 @@ const tabs = [
     body: (
       <ol className="space-y-3 list-none">
         {[
-          ["Data Acquisition", "Deploy sensor unit at candidate site for 2–4 weeks; sample every 60s."],
-          ["Cloud Storage", "Stream telemetry via MQTT → Firebase / Supabase time-series tables."],
-          ["Feature Engineering", "Aggregate hourly features; merge with weather API forecasts."],
-          ["Model Training", "Train LSTM + XGBoost ensemble on historical irradiance datasets."],
-          ["Deployment", "Serve predictions via REST endpoint to React dashboard."],
+          ["Data Acquisition", "Deploy the sensor unit at candidate site for 2–4 weeks, sampling every 60 seconds."],
+          ["Cloud Storage", "Stream telemetry data via MQTT to Firebase or Supabase time-series tables."],
+          ["Feature Engineering", "Aggregate hourly data and merge with weather API forecasts to enhance prediction accuracy."],
+          ["Model Training", "Train a hybrid LSTM + XGBoost model on historical irradiance datasets for energy prediction."],
+          ["Deployment", "Serve predictions via REST API to React dashboard for real-time user access."]
         ].map(([t, d], i) => (
           <li key={i} className="flex gap-3">
-            <span className="w-7 h-7 rounded-lg bg-gradient-mixed text-background font-bold text-sm flex items-center justify-center shrink-0">{i+1}</span>
-            <div><div className="font-semibold text-foreground">{t}</div><div className="text-sm">{d}</div></div>
+            <span className="w-7 h-7 rounded-lg bg-gradient-mixed text-background font-bold text-sm flex items-center justify-center shrink-0">{i + 1}</span>
+            <div>
+              <div className="font-semibold text-foreground">{t}</div>
+              <div className="text-sm">{d}</div>
+            </div>
           </li>
         ))}
       </ol>
@@ -85,7 +84,9 @@ const tabs = [
     label: "Technologies",
     body: (
       <div className="flex flex-wrap gap-2">
-        {["ESP32","BH1750 Sensor","DHT22","MQTT","Firebase","Python","TensorFlow","XGBoost","React","Tailwind","Node.js","REST API"].map((t) => (
+        {[
+          "ESP32", "BH1750 Sensor", "DHT22", "MQTT", "Firebase", "Python", "TensorFlow", "XGBoost", "React", "Tailwind", "Node.js", "REST API"
+        ].map((t) => (
           <span key={t} className="px-3 py-1.5 rounded-lg glass border border-neon/20 text-sm font-mono text-foreground hover:border-neon hover:text-neon transition-colors">
             {t}
           </span>
@@ -93,7 +94,29 @@ const tabs = [
       </div>
     ),
   },
+  {
+    id: "future",
+    icon: Lightbulb,
+    label: "Future Work",
+    body: (
+      <>
+        In future iterations of the project, we plan to:
+        <ul className="space-y-2">
+          <li className="flex gap-2">
+            <ChevronRight className="w-4 h-4 text-neon mt-1 shrink-0" /> Enhance the IoT device with additional sensors to capture more data points (e.g., solar panel degradation over time).
+          </li>
+          <li className="flex gap-2">
+            <ChevronRight className="w-4 h-4 text-neon mt-1 shrink-0" /> Integrate AI-based optimization tools for smart panel placement recommendations.
+          </li>
+          <li className="flex gap-2">
+            <ChevronRight className="w-4 h-4 text-neon mt-1 shrink-0" /> Expand the system’s capabilities to support commercial solar installations.
+          </li>
+        </ul>
+      </>
+    ),
+  },
 ];
+
 
 export const Research = () => {
   const [active, setActive] = useState("literature");

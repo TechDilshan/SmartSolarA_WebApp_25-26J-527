@@ -8,26 +8,26 @@ const proposals = [
 ];
 
 const finalReports = [
-  { name: "Dilshan S. C", reg: "IT22118318", url: "https://drive.google.com/" },
-  { name: "Madusarani K.G.L", reg: "IT22569868", url: "https://drive.google.com/" },
-  { name: "Liyanaarachchi L.A.V.U", reg: "IT22120502", url: "https://drive.google.com/" },
-  { name: "K Rangana Malmi Nadee", reg: "IT22341204", url: "https://drive.google.com/" },
+  { name: "Dilshan S. C", reg: "IT22118318", url: "https://drive.google.com/drive/folders/1Sc-TDEgFlTpq_BYQXAmfgHS1XDKT8FK1?usp=drive_link" },
+  { name: "Madusarani K.G.L", reg: "IT22569868", url: "https://drive.google.com/drive/folders/1Sc-TDEgFlTpq_BYQXAmfgHS1XDKT8FK1?usp=drive_link" },
+  { name: "Liyanaarachchi L.A.V.U", reg: "IT22120502", url: "https://drive.google.com/drive/folders/1Sc-TDEgFlTpq_BYQXAmfgHS1XDKT8FK1?usp=drive_link" },
+  { name: "K Rangana Malmi Nadee", reg: "IT22341204", url: "https://drive.google.com/drive/folders/1Sc-TDEgFlTpq_BYQXAmfgHS1XDKT8FK1?usp=drive_link" },
 ];
 
 const docs = [
-  { title: "Project Charter", desc: "Initial scope, team roles, timeline & deliverables.", url: "https://drive.google.com/", icon: FileText, color: "neon" },
+  { title: "Project Charter", desc: "Initial scope, team roles, timeline & deliverables.", url: "https://drive.google.com/drive/folders/1RNaXhluMNK_I8JFtyrLcM1gJjdj6vM33?usp=drive_link", icon: FileText, color: "neon" },
   { title: "Checklist 1", desc: "Git Repository", url: "https://drive.google.com/file/d/1OO6CqqmB4vBTmufWmZ2mde61A0HcJi84/view?usp=drive_link", icon: FileText, color: "solar" },
-  { title: "Checklist 2", desc: "UI/UX Demo Video", url: "https://drive.google.com/", icon: FileText, color: "neon" },
-  { title: "Checklist 3", desc: "Deployment Report", url: "https://drive.google.com/", icon: FileText, color: "solar" },
-  { title: "Group Final Report", desc: "Complete dissertation including results & conclusions.", url: "https://drive.google.com/", icon: BookMarked, color: "solar" },
-  { title: "Logbooks", desc: "Weekly progress logs and supervisor meeting notes.", url: "https://drive.google.com/", icon: FileSpreadsheet, color: "solar" },
+  { title: "Checklist 2", desc: "UI/UX Demo Video", url: "https://drive.google.com/drive/folders/1VFEeQu-3gtNgguDsagNCHCyN814mr8gG?usp=drive_link", icon: FileText, color: "neon" },
+  { title: "Checklist 3", desc: "Deployment Report", url: "https://drive.google.com/drive/folders/1Qduq3sxWY-9tZwhAaDVlq7VtKhNnd8SE?usp=drive_link", icon: FileText, color: "solar" },
+  { title: "Group Final Report", desc: "Complete dissertation including results & conclusions.", url: "https://drive.google.com/drive/folders/16mOEWCuU2ca1xmxoXSDw0QNunQ1Lj3jR?usp=drive_link", icon: BookMarked, color: "solar" },
+  { title: "Logbooks", desc: "Weekly progress logs and supervisor meeting notes.", url: "https://drive.google.com/drive/folders/1SKAi1lXDhnkw1qGxQB7Ik0K0kNnnDrlX?usp=drive_link", icon: FileSpreadsheet, color: "solar" },
 ];
 
 const slides = [
   { title: "Proposal Presentation", desc: "Pitch deck explaining the problem, idea & expected impact.", url: "https://drive.google.com/drive/folders/1np-N7qWaFPb7oCvVyUbB1Td1Pij5izzt?usp=drive_link" },
   { title: "Progress Presentation 1", desc: "Hardware prototype and sensor calibration findings.", url: "https://drive.google.com/drive/folders/13w9ybomXXh3JqBCsfZSrXmW5_OvzN1wk?usp=drive_link" },
   { title: "Progress Presentation 2", desc: "Cloud pipeline + ML model + dashboard demo.", url: "https://drive.google.com/drive/folders/1uB93-v3D0RAAbUcHwMKMeW1HZ7Sx-Mzm?usp=drive_link" },
-  { title: "Final Presentation", desc: "End-to-end system showcase with validation results.", url: "https://drive.google.com/" },
+  { title: "Final Presentation", desc: "End-to-end system showcase with validation results.", url: "https://drive.google.com/drive/folders/18_bLaVItOAaUFRZOFK9CQOM5O7YpnBv9?usp=drive_link" },
 ];
 
 type MemberDoc = { name: string; reg: string; url: string };
@@ -58,9 +58,8 @@ const PremiumDocCard = ({
     >
       {/* decorative glow */}
       <div
-        className={`absolute -top-24 -right-24 w-72 h-72 rounded-full blur-3xl opacity-40 ${
-          accent === "neon" ? "bg-neon/30" : "bg-solar/30"
-        }`}
+        className={`absolute -top-24 -right-24 w-72 h-72 rounded-full blur-3xl opacity-40 ${accent === "neon" ? "bg-neon/30" : "bg-solar/30"
+          }`}
       />
 
       <div className="relative">
@@ -154,16 +153,14 @@ export const Documents = () => (
               className="glass-card tilt-card p-6 reveal group flex flex-col"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
-                d.color === "neon" ? "bg-neon/10 border border-neon/30" : "bg-solar/10 border border-solar/30"
-              }`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${d.color === "neon" ? "bg-neon/10 border border-neon/30" : "bg-solar/10 border border-solar/30"
+                }`}>
                 <d.icon className={`w-5 h-5 ${d.color === "neon" ? "text-neon" : "text-solar"}`} />
               </div>
               <h3 className="font-bold text-lg mb-2">{d.title}</h3>
               <p className="text-sm text-muted-foreground mb-5 flex-1">{d.desc}</p>
-              <div className={`inline-flex items-center gap-2 text-sm font-semibold ${
-                d.color === "neon" ? "text-neon" : "text-solar"
-              } group-hover:gap-3 transition-all`}>
+              <div className={`inline-flex items-center gap-2 text-sm font-semibold ${d.color === "neon" ? "text-neon" : "text-solar"
+                } group-hover:gap-3 transition-all`}>
                 View / Download <ExternalLink className="w-3.5 h-3.5" />
               </div>
             </a>
